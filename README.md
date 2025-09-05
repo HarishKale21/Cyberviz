@@ -51,7 +51,7 @@ No complex setup or installation is required! This project uses only front-end t
 
 Clone the repository (or download the files to a folder):
 
-git clone [https://github.com/your-username/cyberviz.git](https://github.com/your-username/cyberviz.git)
+git clone (https://github.com/HarishKale21/Cyberviz.git)
 
 Navigate to the project directory:
 
