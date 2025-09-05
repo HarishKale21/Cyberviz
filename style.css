@@ -1,7 +1,7 @@
 body {
-    font-family: 'Orbitron', sans-serif; /* Font wahi rakhte hain, ye techy lagta hai */
-    background-color: #0d1117; /* GitHub dark mode jaisa background */
-    color: #e6edf3; /* Soft white text */
+    font-family: 'Orbitron', sans-serif;
+    background-color: #0d1117; 
+    color: #e6edf3; 
     margin: 0;
     padding: 20px;
     text-align: center;
@@ -19,35 +19,35 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    background-color: rgba(1, 4, 9, 0.7); /* Thoda darker, semi-transparent */
-    backdrop-filter: blur(8px); /* Thoda zyada blur */
-    padding: 25px; /* Thoda zyada padding */
-    border-radius: 12px; /* Thoda zyada border-radius */
-    border: 1px solid #30363d; /* Soft border */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(27, 158, 245, 0.2); /* Subtle blue glow */
+    background-color: rgba(1, 4, 9, 0.7); 
+    backdrop-filter: blur(8px); 
+    padding: 25px;
+    border-radius: 12px; 
+    border: 1px solid #30363d;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(27, 158, 245, 0.2); 
 }
 
 h1 {
-    color: #58a6ff; /* Soft blue heading */
-    text-shadow: 0 0 8px rgba(88, 166, 255, 0.4); /* Soft glow */
+    color: #58a6ff; 
+    text-shadow: 0 0 8px rgba(88, 166, 255, 0.4); 
     margin-bottom: 25px;
 }
 
-/* Filters Styling */
+
 #filters {
-    margin-top: 25px; /* Map aur filters ke beech gap ke liye */
+    margin-top: 25px; 
     margin-bottom: 20px;
 }
 .filter-btn {
     font-family: 'Orbitron', sans-serif;
-    background-color: #21262d; /* Dark button background */
-    color: #c9d1d9; /* Light grey text */
-    border: 1px solid #30363d; /* Soft border */
-    padding: 10px 18px; /* Thoda zyada padding */
-    margin: 0 8px; /* Thoda zyada margin */
+    background-color: #21262d; 
+    color: #c9d1d9; 
+    border: 1px solid #30363d; 
+    padding: 10px 18px; 
+    margin: 0 8px; 
     cursor: pointer;
     border-radius: 6px;
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease; 
 }
 .filter-btn:hover {
     background-color: #30363d;
@@ -56,22 +56,22 @@ h1 {
     box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
 }
 .filter-btn.active {
-    background-color: #58a6ff; /* Active button blue */
+    background-color: #58a6ff; 
     border-color: #58a6ff;
-    color: #0d1117; /* Active button ka text dark */
+    color: #0d1117; 
     box-shadow: 0 0 15px rgba(88, 166, 255, 0.5);
 }
 
-/* Attack Info Links */
+
 .attack-info-links {
     margin-bottom: 25px;
-    color: #8b949e; /* Muted grey text */
+    color: #8b949e; 
     font-size: 0.9em;
 }
 .info-btn {
     background: #21262d;
     border: 1px solid #30363d;
-    color: #79c0ff; /* Light blue link color */
+    color: #79c0ff; 
     padding: 6px 12px;
     margin-left: 12px;
     border-radius: 5px;
@@ -85,29 +85,29 @@ h1 {
     box-shadow: 0 0 10px rgba(121, 192, 255, 0.2);
 }
 
-/* Map Container */
+
 .map-container {
     position: relative;
     border: 1px solid #30363d;
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-    overflow: hidden; /* Important for border-radius to apply to map */
+    overflow: hidden; 
 }
 #cyber-map {
     width: 100%;
     height: 500px;
-    background-color: #161b22; /* Map background */
+    background-color: #161b22; 
     border-radius: 8px;
 }
 
 
-/* Details Box Styling */
+
 #details-box {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 280px; /* Thoda zyada width */
-    background-color: rgba(1, 4, 9, 0.85); /* Darker transparent */
+    width: 280px; 
+    background-color: rgba(1, 4, 9, 0.85); 
     backdrop-filter: blur(10px);
     border: 1px solid #30363d;
     border-radius: 10px;
@@ -129,7 +129,7 @@ h1 {
 }
 #close-details {
     font-family: 'Orbitron', sans-serif;
-    background-color: #d12b2b; /* Softer red */
+    background-color: #d12b2b; 
     color: white;
     border: none;
     padding: 8px 15px;
@@ -145,7 +145,7 @@ h1 {
     display: none;
 }
 
-/* Stats Dashboard Styling */
+
 #stats-dashboard {
     margin-top: 25px;
     padding: 20px;
@@ -166,20 +166,20 @@ h1 {
 }
 .stat p:last-child {
     margin: 8px 0 0 0;
-    font-size: 1.8em; /* Thoda bada font */
+    font-size: 1.8em; 
     font-weight: bold;
     color: #58a6ff;
     text-shadow: 0 0 8px rgba(88, 166, 255, 0.4);
 }
 
-/* Modal Styling */
+
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Darker overlay */
+    background-color: rgba(0, 0, 0, 0.85); 
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
@@ -193,7 +193,7 @@ h1 {
     pointer-events: none;
 }
 .modal-content {
-    background: #0d1117; /* Dark background */
+    background: #0d1117;
     padding: 35px;
     border-radius: 12px;
     border: 1px solid #30363d;
@@ -216,7 +216,7 @@ h1 {
     margin-bottom: 20px;
 }
 #modal-body h3 {
-    color: #238636; /* Softer green for subheadings */
+    color: #238636; 
     font-size: 1.2em;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -243,20 +243,20 @@ h1 {
 #modal-close-btn:hover {
     background-color: #ff3838;
 }
-/* Dashboard ko do parts mein baantne ke liye */
+
 #dashboard-container {
     margin-top: 25px;
     display: flex;
-    gap: 20px; /* Dono boxes ke beech mein gap */
+    gap: 20px; 
 }
 
-/* Puraane dashboard ko nayi width de dein */
+
 #stats-dashboard {
     width: 35%;
-    margin-top: 0; /* Puraana margin hata dein */
+    margin-top: 0; 
 }
 
-/* Naye Bar Chart container ki styling */
+
 #barchart-container {
     width: 65%;
     padding: 20px;
@@ -281,32 +281,32 @@ h1 {
     width: 100%;
     height: 200px; /* Chart ki height */
 }
-/* Smooth Scrolling ke liye */
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Sections ko theek se align karne ke liye taki nav bar unhe na chupaye */
+
 section {
-    padding-top: 100px; /* Nav bar ki height ke hisaab se padding */
-    margin-top: -80px; /* Thoda sa adjust karein */
+    padding-top: 100px; 
+    margin-top: -80px; 
 }
 
 section#home {
-    padding-top: 20px; /* Pehle section ko padding nahi chahiye */
+    padding-top: 20px; 
     margin-top: 0;
 }
 
-/* Navigation Bar Styling */
+
 nav {
-    position: sticky; /* Hamesha upar chipka rahega */
+    position: sticky; 
     top: 0;
     left: 0;
     width: 100%;
     background-color: rgba(13, 17, 23, 0.8);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #30363d;
-    z-index: 1000; /* Sabse upar rahega */
+    z-index: 1000; 
     padding: 10px 0;
 }
 
@@ -341,7 +341,7 @@ nav {
     color: #58a6ff;
     border-bottom: 2px solid #58a6ff;
 }
-/* Case Studies Section Styling */
+
 .section-title {
     color: #58a6ff;
     text-shadow: 0 0 8px rgba(88, 166, 255, 0.4);
@@ -396,7 +396,7 @@ nav {
     color: #8b949e;
     font-size: 0.9em;
     line-height: 1.6;
-    min-height: 50px; /* To keep cards of same height */
+    min-height: 50px; 
 }
 
 .read-more-btn {
@@ -415,21 +415,22 @@ nav {
     background-color: #58a6ff;
     color: #0d1117;
 }
-/* Font Change for Better Readability */
 
-/* Pop-up (Modal) ke andar ke text ke liye */
+
+
 #modal-body p, #modal-body ul, #modal-body li {
-    font-family: 'Roboto', sans-serif; /* Naya, readable font */
+    font-family: 'Roboto', sans-serif; 
     font-size: 1em;
-    line-height: 1.7; /* Lines ke beech thoda zyada space */
+    line-height: 1.7; 
 }
 
-/* Case Study cards ke summary ke liye */
+
 .card-summary {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Attack details box ke text ke liye */
+
 #details-box p {
     font-family: 'Roboto', sans-serif;
+
 }
