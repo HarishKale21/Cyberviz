@@ -7,15 +7,15 @@ particlesJS('particles-js', {
         "value_area": 800
       }
     },
-    // particles-config.js mein 'color' property dhundhein aur update karein:
+    
 "color": {
-  "value": "#58a6ff" // Naya blue color jo theme se match karega
+  "value": "#58a6ff" 
 },
-// line_linked mein bhi color badal dein:
+
 "line_linked": {
   "enable": true,
   "distance": 150,
-  "color": "#58a6ff", // Naya blue color
+  "color": "#58a6ff", 
   "opacity": 0.4,
   "width": 1
 },
@@ -71,4 +71,5 @@ particlesJS('particles-js', {
     }
   },
   "retina_detect": true
+
 });
