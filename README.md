@@ -66,8 +66,11 @@ The project is organized into four main files:
 
 /
 ├── index.html----------# The main HTML file for the website structure and layout.
+
 ├── style.css-----------# Contains all the styling, colors, and layout rules.
+
 ├── script.js-----------# The core JavaScript logic for the map, simulation, charts, and all interactivity.
+
 └── particles-config.js-# The configuration file for the Particles.js background animation.
 
 📄 License
