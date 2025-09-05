@@ -64,7 +64,6 @@ That's it! The visualization will start immediately. For the best experience, it
 📂 File Structure
 The project is organized into four main files:
 
-/
 ├── index.html----------# The main HTML file for the website structure and layout.
 
 ├── style.css-----------# Contains all the styling, colors, and layout rules.
