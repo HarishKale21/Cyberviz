@@ -25,7 +25,7 @@ barChart.data = [];
 var categoryAxis = barChart.yAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "country";
 categoryAxis.renderer.grid.template.disabled = true;
-categoryAxis.renderer.labels.template.fill = am4core.color("#c9d1d9"); // Text color from theme
+categoryAxis.renderer.labels.template.fill = am4core.color("#c9d1d9"); 
 categoryAxis.renderer.minGridDistance = 1;
 
 var valueAxis = barChart.xAxes.push(new am4charts.ValueAxis());
@@ -37,15 +37,15 @@ var series = barChart.series.push(new am4charts.ColumnSeries());
 series.dataFields.valueX = "attacks";
 series.dataFields.categoryY = "country";
 series.columns.template.tooltipText = "{categoryY}: {valueX} attacks";
-series.columns.template.fill = am4core.color("#58a6ff"); // Blue color from theme
+series.columns.template.fill = am4core.color("#58a6ff"); 
 series.columns.template.strokeWidth = 0;
 series.columns.template.column.cornerRadiusBottomRight = 5;
 series.columns.template.column.cornerRadiusTopRight = 5;
 
 const attackColors = {
-    "DDoS": am4core.color("#d12b2b"),      // Darker Red for DDoS
-    "Malware": am4core.color("#c48b0c"),   // Darker Orange for Malware
-    "Phishing": am4core.color("#2196f3")   // Professional Blue for Phishing
+    "DDoS": am4core.color("#d12b2b"),      
+    "Malware": am4core.color("#c48b0c"),  
+    "Phishing": am4core.color("#2196f3")  
 };
 
 let allAttacks = [];
@@ -187,7 +187,7 @@ const attackDetails = {
         how_it_works: "<h3>How does it work?</h3><p>You receive an email or a message that looks legitimate, often from a bank or a social media site. It contains a link that takes you to a fake website. When you enter your details on this fake site, the information is sent directly to the hacker.</p>"
     }
 };
-// 'attackDetails' object ke neeche isko add karein
+
 
 const caseStudies = {
     "case1": {
@@ -233,7 +233,7 @@ function showInfoModal(attackType) {
     }
 }
 
-// 'showInfoModal()' function ke neeche isko add karein
+
 
 function showCaseStudyModal(caseId) {
     const caseData = caseStudies[caseId];
@@ -257,7 +257,6 @@ modalCloseBtn.addEventListener('click', hideInfoModal);
 modal.addEventListener('click', (event) => { if (event.target === modal) { hideInfoModal(); } });
 
 
-// Script ke aakhir mein isko add karein
 
 document.querySelectorAll('.read-more-btn').forEach(button => {
     button.addEventListener('click', function() {
@@ -267,6 +266,7 @@ document.querySelectorAll('.read-more-btn').forEach(button => {
 });
 
 setInterval(generateAttack, 2000);
+
 
 
 });
