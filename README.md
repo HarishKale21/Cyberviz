@@ -65,10 +65,10 @@ That's it! The visualization will start immediately. For the best experience, it
 The project is organized into four main files:
 
 /
-├── index.html          # The main HTML file for the website structure and layout.
-├── style.css           # Contains all the styling, colors, and layout rules.
-├── script.js           # The core JavaScript logic for the map, simulation, charts, and all interactivity.
-└── particles-config.js # The configuration file for the Particles.js background animation.
+├── index.html----------# The main HTML file for the website structure and layout.
+├── style.css-----------# Contains all the styling, colors, and layout rules.
+├── script.js-----------# The core JavaScript logic for the map, simulation, charts, and all interactivity.
+└── particles-config.js-# The configuration file for the Particles.js background animation.
 
 📄 License
 This project is licensed under the MIT License. See the LICENSE file for more details.
