@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Cyber Attack Map</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================== STICKY NAVIGATION BAR ================== -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">CyberViz</a>
+            <div class="nav-links">
+                <a href="#map-section">Live Map</a>
+                <a href="#dashboard-section">Dashboard</a>
+                <a href="#info-section">Learn</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================== MAIN CONTENT ================== -->
+    <div id="particles-js"></div>
+    <div class="container">
+
+        <section id="home">
+            <h1>Live Cyber Attack Visualization</h1>
+        </section>
+
+        <section id="map-section">
+             <div class="map-container">
+                <div id="cyber-map" style="width: 100%; height: 500px;"></div>
+                <div id="details-box" class="hidden">
+                    <h3>Attack Details</h3>
+                    <p id="attack-info"></p>
+                    <button id="close-details">Close</button>
+                </div>
+            </div>
+            <!-- Existing Filters -->
+            <div id="filters">
+                <button class="filter-btn active" data-filter="all">All Attacks</button>
+                <button class="filter-btn" data-filter="DDoS">DDoS</button>
+                <button class="filter-btn" data-filter="Malware">Malware</button>
+                <button class="filter-btn" data-filter="Phishing">Phishing</button>
+            </div>
+        </section>
+
+        <section id="dashboard-section">
+            <div id="dashboard-container">
+                <div id="stats-dashboard">
+                    <h2>Statistics</h2>
+                    <div class="stat">
+                        <p>Total Attacks:</p>
+                        <p id="total-attacks">0</p>
+                    </div>
+                    <div class="stat">
+                        <p>Top Target Country:</p>
+                        <p id="top-target">N/A</p>
+                    </div>
+                </div>
+                <div id="barchart-container">
+                    <h2>Top 5 Targets</h2>
+                    <div id="barchartdiv"></div>
+                </div>
+            </div>
+        </section>
+        
+                <section id="info-section">
+            
+            <!-- Existing "Learn" Buttons -->
+            <div class="attack-info-links">
+                <span>Learn About Attacks:</span>
+                <button class="info-btn" data-attack="DDoS">What is DDoS?</button>
+                <button class="info-btn" data-attack="Malware">What is Malware?</button>
+                <button class="info-btn" data-attack="Phishing">What is Phishing?</button>
+            </div>
+
+            <!-- New "Case Studies" section starts here -->
+            <h2 class="section-title">Real-World Indian Cybercrime Case Studies</h2>
+            <div class="case-studies-grid">
+
+                <div class="case-studies-grid">
+
+    <!-- Case Study Card 1 -->
+    <div class="case-card">
+        <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+        </div>
+        <h3>Online Banking Fraud Case</h3>
+        <p class="card-summary">A notable case where phishing was used to siphon money from the bank accounts of several people in Pune.</p>
+        <button class="read-more-btn" data-caseid="case1">Read Findings</button>
+    </div>
+
+    <!-- Case Study Card 2 -->
+    <div class="case-card">
+        <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+        </div>
+        <h3>Corporate Data Theft Case</h3>
+        <p class="card-summary">A case involving a disgruntled employee stealing confidential company data and attempting to sell it to competitors.</p>
+        <button class="read-more-btn" data-caseid="case2">Read Findings</button>
+    </div>
+
+</div>
+
+            </div>
+            <!-- Case studies section ends -->
+
+            
+        </section>
+
+
+
+    </div>
+
+    <!-- ================== MODAL AND SCRIPTS ================== -->
+    <div id="info-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <h2 id="modal-title">Attack Information</h2>
+            <div id="modal-body">
+                <p>Yahan jaankari aayegi...</p>
+            </div>
+            <button id="modal-close-btn">Close</button>
+        </div>
+    </div>
+
+    <audio id="attack-sound" src="blip.mp3" preload="auto"></audio>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles-config.js"></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://www.amcharts.com/lib/4/geodata/data/countries2.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
