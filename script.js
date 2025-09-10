@@ -25,7 +25,7 @@ barChart.data = [];
 var categoryAxis = barChart.yAxes.push(new am4charts.CategoryAxis());
 categoryAxis.dataFields.category = "country";
 categoryAxis.renderer.grid.template.disabled = true;
-categoryAxis.renderer.labels.template.fill = am4core.color("#c9d1d9"); 
+categoryAxis.renderer.labels.template.fill = am4core.color("#c9d1d9");
 categoryAxis.renderer.minGridDistance = 1;
 
 var valueAxis = barChart.xAxes.push(new am4charts.ValueAxis());
@@ -37,15 +37,15 @@ var series = barChart.series.push(new am4charts.ColumnSeries());
 series.dataFields.valueX = "attacks";
 series.dataFields.categoryY = "country";
 series.columns.template.tooltipText = "{categoryY}: {valueX} attacks";
-series.columns.template.fill = am4core.color("#58a6ff"); 
+series.columns.template.fill = am4core.color("#58a6ff");
 series.columns.template.strokeWidth = 0;
 series.columns.template.column.cornerRadiusBottomRight = 5;
 series.columns.template.column.cornerRadiusTopRight = 5;
 
 const attackColors = {
-    "DDoS": am4core.color("#d12b2b"),      
-    "Malware": am4core.color("#c48b0c"),  
-    "Phishing": am4core.color("#2196f3")  
+    "DDoS": am4core.color("#d12b2b"),
+    "Malware": am4core.color("#c48b0c"),
+    "Phishing": am4core.color("#2196f3")
 };
 
 let allAttacks = [];
@@ -163,10 +163,8 @@ function updateBarChart() {
         chartData.push({ "country": country, "attacks": targetCounts[country] });
     }
 
-    // Attacks ke hisaab se sort karein
     chartData.sort((a, b) => b.attacks - a.attacks);
 
-    // Sirf Top 5 countries lein
     barChart.data = chartData.slice(0, 5);
 }
 
@@ -187,7 +185,6 @@ const attackDetails = {
         how_it_works: "<h3>How does it work?</h3><p>You receive an email or a message that looks legitimate, often from a bank or a social media site. It contains a link that takes you to a fake website. When you enter your details on this fake site, the information is sent directly to the hacker.</p>"
     }
 };
-
 
 const caseStudies = {
     "case1": {
@@ -216,7 +213,34 @@ const caseStudies = {
                   </ul>
                   <h3>Findings</h3>
                   <p>A forensic investigation recovered the stolen data from the accused's personal laptop. The court considered it a serious case of corporate espionage and handed a strict sentence to the accused under the IT Act. This case served as a wake-up call for companies to strengthen their internal data security policies and employee exit protocols.</p>`
-    }
+    },
+    "case3": {
+        title: "Phishing via Fake Bank Websites and Apps",
+        details: `<h3>Case Summary</h3>
+                  <p>Two individuals, Rahul Lakheda and Vikas Kumar, both school dropouts from Delhi's Badarpur area, were arrested by the Lucknow Cyber Crime Cell for operating an elaborate phishing racket. The duo impersonated bank representatives and created fake banking websites and Android apps to defraud victims.</p>
+                  <p>They contacted people through SMS and WhatsApp, offering fake services such as credit card upgrades or insurance activation. Victims were tricked into clicking malicious links or downloading fake apps, through which they unknowingly shared their credit card and banking credentials. These details were then used by the criminals to make unauthorized purchases of expensive electronics, which were later resold in Delhi's grey market.</p>
+                  <p>The fraud was exposed when a complainant from Lucknow lost ₹1.6 lakh, prompting a cybercrime investigation that led to the arrests. Police seized 25 mobile phones, 24 SIM cards, a laptop, router, printer, and ₹41,250 in cash.</p>
+                  <h3>Action Under the IT Act,2000</h3>
+                  <p>Applicable sections of the Information Technology Act, 2000:</p>
+                  <ul>
+                    <li><strong>Section 66C - Identity Theft</strong> For stealing and misusing personal and financial data of the victims.</li>
+                    <li><strong>Section 66D - Cheating by Personation using Computer Resources</strong> For impersonating bank officials and misleading users to extract sensitive information.</li>
+                    <li><strong>Section 43 - Unauthorized Access and Data Theft</strong> For accessing victims' systems and financial accounts without consent.</li>
+                  </ul>
+                  <h3>Findings</h3>
+                  <ul>
+                    <li>Evidence Recovered: Digital footprints, phishing apps/websites, communication records, and seized electronics.</li>
+                    <li>Criminal Modus Operandi: Fake websites/apps, social engineering through calls and messages, misuse of credentials.</li>
+                    <li>Law Enforcement Success: Swift tracing of the accused, recovery of equipment and partial funds, highlighting a well-coordinated cybercrime response.</li>
+                  </ul>
+                  <h3>Conclusions</h3>
+                  <p>This case illustrates the dangers of phishing attacks involving fake websites and mobile apps, and how even low-education individuals can carry out high-tech fraud. It underscores:</p>
+                    <ul>
+                    <li>The growing need for cyber hygiene education among the public.</li>
+                    <li>The importance of digital evidence in cybercrime investigations.</li>
+                    <li>The active role of law enforcement in tackling IT Act violations through technical investigation and prompt arrests.</li>
+                  </ul>`
+    } // <-- YEH WALA BRACE MISSING THA
 };
 
 const modal = document.getElementById('info-modal');
@@ -233,8 +257,6 @@ function showInfoModal(attackType) {
     }
 }
 
-
-
 function showCaseStudyModal(caseId) {
     const caseData = caseStudies[caseId];
     if (caseData) {
@@ -244,7 +266,6 @@ function showCaseStudyModal(caseId) {
     }
 }
 
-
 function hideInfoModal() { modal.classList.add('hidden'); }
 
 document.querySelectorAll('.info-btn').forEach(button => {
@@ -253,10 +274,9 @@ document.querySelectorAll('.info-btn').forEach(button => {
         showInfoModal(attackType);
     });
 });
+
 modalCloseBtn.addEventListener('click', hideInfoModal);
 modal.addEventListener('click', (event) => { if (event.target === modal) { hideInfoModal(); } });
-
-
 
 document.querySelectorAll('.read-more-btn').forEach(button => {
     button.addEventListener('click', function() {
@@ -267,6 +287,5 @@ document.querySelectorAll('.read-more-btn').forEach(button => {
 
 setInterval(generateAttack, 2000);
 
-
-
 });
+
